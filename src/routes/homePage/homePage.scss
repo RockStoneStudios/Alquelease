@@ -1,0 +1,126 @@
+@import "../../responsive.scss";
+
+.homePage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+      height: 100%;
+
+      @include lg{
+        padding-right: 50px;
+      }
+
+      @include md{
+        padding: 0;
+      }
+
+      @include sm{
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 60px;
+
+        @include lg {
+          font-size: 48px;
+        }
+      }
+      .categories{
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+      .categorie{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+      }
+      .info{
+        display: flex;
+        align-items: end;
+        justify-content: center;
+      }
+      .no_verificado{
+        font-size: 45px;
+        color: red;
+        
+      @include lg{
+        font-size: 25px;
+      }
+
+      @include md{
+        font-size: 14px;
+        margin-right: 5px;
+      }
+        
+      }
+      .verificado{
+        font-size: 45px;
+        color: green;
+        
+      @include lg{
+        font-size: 25px;
+      }
+
+      @include md{
+        font-size: 14px;
+        margin-left: 6px;
+      }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 32px;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+  }
+}
