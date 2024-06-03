@@ -1,8 +1,12 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-  baseURL: "http://localhost:8800/api",
-  withCredentials: true,
+  baseURL: "https://alquelease-336066c2c468.herokuapp.com/api",
+  withCredentials: false,
+  headers: {
+    'Access-Control-Allow-Origin' : '*',
+    'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',   
+  }
 });
 
 export default apiRequest;

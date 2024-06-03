@@ -14,8 +14,10 @@ function ProfilePage() {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
+    console.log('Hello');
     try {
-      await apiRequest.post("/auth/logout");
+    const response =  await apiRequest.post("/auth/logout");
+     console.log(response);
       updateUser(null);
       navigate("/");
     } catch (err) {

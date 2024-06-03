@@ -113,6 +113,10 @@ nav {
 
     .register {
       background-color: #fece51;
+      cursor: pointer;
+      &:hover{
+        cursor: pointer;
+      }
     }
 
     .menuIcon {

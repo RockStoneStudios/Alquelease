@@ -26,11 +26,12 @@ function Login() {
         username,
         password,
       });
-
+       
       updateUser(res.data)
 
       navigate("/");
     } catch (err) {
+      console.log(err.response);
       setError(err.response.data.message);
     } finally {
       setIsLoading(false);
