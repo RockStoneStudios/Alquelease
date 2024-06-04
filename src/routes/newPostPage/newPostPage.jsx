@@ -20,7 +20,7 @@ function NewPostPage() {
     console.log(inputs,value);
     try {
       const res = await apiRequest.post("/posts", {
-        
+       
         postData: {
           title: inputs.title,
           price: parseInt(inputs.price),
@@ -45,6 +45,7 @@ function NewPostPage() {
           restaurant: parseInt(inputs.restaurant),
         },
       });
+      console.log(res.data);
       navigate("/"+res.data.id)
     } catch (err) {
       console.log(err);
