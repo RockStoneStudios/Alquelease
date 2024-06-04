@@ -11,6 +11,10 @@ import NewPostPage from "./routes/newPostPage/newPostPage";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 import Nosotros from "./routes/nosotros/Nosotros";
 import Contacto from "./routes/contactos/contacto";
+import markerIcon from "../node_modules/leaflet/dist/images/marker-icon.png";
+L.Marker.prototype.setIcon(L.icon({
+  iconUrl:markerIcon
+}));
 
 
 function App() {
