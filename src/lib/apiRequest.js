@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiRequest = axios.create({
+const apiRequest = fetch({
   baseURL: "https://alquelease-336066c2c468.herokuapp.com/api",
   withCredentials: false, // Incluir credenciales en las solicitudes
   headers : {
