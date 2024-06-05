@@ -33,7 +33,7 @@ function Navbar() {
             <img src={currentUser.avatar || "/noavatar.jpg"} alt="" />
             <span>{currentUser.username}</span>
             <Link to="/profile" className="profile">
-              {number > 0 && <div className="notification">{number}</div>}
+              {<div className="notification">2</div>}
               <span>Perfil</span>
             </Link>
           </div>
