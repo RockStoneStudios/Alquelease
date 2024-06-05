@@ -9,8 +9,8 @@ function Navbar() {
 
   const { currentUser } = useContext(AuthContext);
 
-  // const fetch = useNotificationStore((state) => state.fetch);
-  // const number = useNotificationStore((state) => state.number);
+  const fetch = useNotificationStore((state) => state.fetch);
+  const number = useNotificationStore((state) => state.number);
 
   if(currentUser) fetch();
 
@@ -33,7 +33,7 @@ function Navbar() {
             <img src={currentUser.avatar || "/noavatar.jpg"} alt="" />
             <span>{currentUser.username}</span>
             <Link to="/profile" className="profile">
-              {<div className="notification">2</div>}
+              {number > 0 && <div className="notification">{number}</div>}
               <span>Perfil</span>
             </Link>
           </div>
